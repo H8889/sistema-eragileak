@@ -1,0 +1,28 @@
+Lehenik eta bein, instalatu bearko deu gauzita bi auek, direla, driver univertsala eta gero minimal ADB eta fastboot, emen enlaceak
+
+
+http://goo.gl/LSN2mS
+
+http://goo.gl/7Rbfrq
+
+Gero istalatuta ahu, euki isoa eta orren barruko system.img, recovery.img, cust.img, eta azkenik boot.img, pasa sortutako ABS eta fastboot, carpetara, joateko askar klik eskubi egin eta habrir archibo hunicacion, orren barruan.
+
+
+Gero tresna ahu erabili or panel bat irekiko dizu eta orren barruan pausu ahuek segitu.
+
+1. jarri "fastboot devices", enter eman eta itsoin bukatu arte.
+
+2. orain jarri "fastboot flash boot boot.img" itsoin bukatu arte.
+
+3. orain "fastboot flash recovery recovery.img" itsoin bukatu arte.
+
+ Nota: emen ari geana da karpetak egite sistemarentzat eta ahu funcionatzeko.
+
+4. Orain beste karpeta "fastboot flash cust cust.img" itsoin bukatu arte
+
+5. horain bukatzeko sistema jarriko diogu, "fastboot flash systeam system.img" ahu sistema jartzendu orregatik asko tardatuko du, itsoin eta ez kendu korronterik ezta kablea mugikorra edo beste gauza utzi dagon bezala dena bukatu arte.
+
+6. bukatu eta gero egin beardeguna isangoda reiniciatsea, ahu egiteko alfdegu botoitik egin edo terminaletik ahu egiteko ortikan jarri ahu "fastboot reboot"
+
+Zorionak orrela jarridezu zure systema eragilea sure mugikorran aupa, orain ahu bukatu da agur eta beste arte, naibadezu zerbait geiago beste gauzetan, agian daukat nire git-an pasa ortikan eta ez badago ba git-en agian badago joan ortikan agur.
+
