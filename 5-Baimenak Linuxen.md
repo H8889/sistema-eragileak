@@ -6,6 +6,11 @@
     - [Baimenak esleitzen modu sinbolikoan](#baimenak-esleitzen-modu-sinbolikoan)
     - [Baimenak modu oktalean](#baimenak-modu-oktalean)
   - [Sticky bit baimena](#sticky-bit-baimena)
+  - [SUID eta GUID baimenak](#suid-eta-guid-baimenak)
+  - [SUID](#suid)
+  - [Ezaugarri bereziak - Isattr eta chattr](#ezaugarri-bereziak---isattr-eta-chattr)
+- [Ariketa 1](#ariketa-1)
+
 
 ## Fitxategi eta direktorioen baimenak
 
@@ -92,3 +97,87 @@ chmod +t froga.txt
 
 ![alt text](image-9.png)
 
+## SUID eta GUID baimenak
+
+## SUID
+
+SUID aktibatuta dagoenean fitxategi hau exekutatzen duen erabiltzaileak sortazailearen baimenak izango ditu.
+
+```bash
+chmod u+s repos
+```
+sortu exekutable bat hurrengo edukiarekin eta izenarekin
+
+suidfroga.sh
+```bash
+#!/bin/bash
+id
+echo $EUID
+```
+baimenak esleituko dizkiogu fitxategiari
+```bash
+chmod 755 suidfroga.sh
+```
+![alt text](image-11.png)
+
+## Ezaugarri bereziak - Isattr eta chattr
+
+Ezaugarri bereziak ikusteko
+`isattr` agindua erabiliko degu
+
+ezaugarri bereziak aldatzeko
+`chattr` agindua erabiliko dugu.
+
+- adibidez, "**i**" artributoaren
+fitxategi bat inmutablea
+bilakatzen dugu.
+Ahu naidu ezan inork ezin dula ezabatu, inkluituta root, kentzeko kendu eginbearko zan "i".
+```bash
+chattr +i froga.txt
+isattr froga.txt
+```
+![alt text](image-12.png)
+
+- "**u**" ezaugarriarekin fitxategi bat ezabatzen dugunean datuak gordeta gelditzen dira eta berreskurapena albiderazten du.
+```bash
+charttr +u froga.txt
+```
+
+- "**e**" ezaugarriarekin, fitxategi bat ezabatzen denean, okupatzen zuen memoria "**0**" kin okupatzen da.
+
+```bash
+chattr +e froga.txt
+```
+![alt text](image-13.png)
+
+- "**c**" ezaugarriarekin fitxategi bat konprimituta egongo da.
+  ```bash
+  chattr +c froga.txt
+  ```
+  - "**a**" ezaigarriarekin gitxategi bati bakarrik geitu ahal zaizkio gauzak, ahu da, ezin da aldatu aurretik zegoen ezer.
+```bash
+chattr +a froga.txt
+```
+# Ariketa 1
+
+lotu dagokion baimenarekin
+
+- 463
+- 123
+- 711
+- 33
+- 161
+- 765
+- 567
+- 101
+- 162
+
+- rwx-x-x
+- --x-w--wx
+- --x-----x
+- -wx-wx-wx
+- r-xrw-rwx
+- rwxrw-r-x
+- --xrw--w-
+- r--rw--w-
+- --xrw---x
