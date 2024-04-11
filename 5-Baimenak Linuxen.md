@@ -10,6 +10,7 @@
   - [SUID](#suid)
   - [Ezaugarri bereziak - Isattr eta chattr](#ezaugarri-bereziak---isattr-eta-chattr)
 - [Ariketa 1](#ariketa-1)
+- [Erantzuna](#erantzuna)
 
 
 ## Fitxategi eta direktorioen baimenak
@@ -165,7 +166,7 @@ lotu dagokion baimenarekin
 - 463
 - 123
 - 711
-- 33
+- 333
 - 161
 - 765
 - 567
@@ -181,3 +182,23 @@ lotu dagokion baimenarekin
 - --xrw--w-
 - r--rw--w-
 - --xrw---x
+# Erantzuna
+- 463
+- 123
+- 711
+- 333
+- 161
+- 765
+- 567
+- 101
+- 162
+
+- rwx-x-x = 711
+- --x-w--wx = 123
+- --x-----x = 101
+- -wx-wx-wx = 333
+- r-xrw-rwx = 567
+- rwxrw-r-x = 765
+- --xrw--w- = 162
+- r--rw--w- = 462
+- --xrw---x = 161
