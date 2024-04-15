@@ -10,7 +10,19 @@
   - [SUID](#suid)
   - [Ezaugarri bereziak - Isattr eta chattr](#ezaugarri-bereziak---isattr-eta-chattr)
 - [Ariketa 1](#ariketa-1)
-- [Erantzuna](#erantzuna)
+- [Erantzuna 1](#erantzuna-1)
+  - [Ariketa 2](#ariketa-2)
+  - [Erantzuna 2](#erantzuna-2)
+  - [Ariketa 3](#ariketa-3)
+  - [Erantzuna 3](#erantzuna-3)
+  - [Ariketa 4](#ariketa-4)
+  - [Erantzun 4](#erantzun-4)
+  - [Ariketa 5](#ariketa-5)
+  - [Erantzuna 5](#erantzuna-5)
+  - [Ariketa 6](#ariketa-6)
+  - [Erantzuna 6](#erantzuna-6)
+  - [Ariketa 7](#ariketa-7)
+  - [Erantzuna 7](#erantzuna-7)
 
 
 ## Fitxategi eta direktorioen baimenak
@@ -121,6 +133,21 @@ chmod 755 suidfroga.sh
 ```
 ![alt text](image-11.png)
 
+Erabiltazileen baimentan S badago 2775
+sticky bita badago  "t" 1755
+
+r-srwx---
+570 -> 4570
+
+r--rws---
+470 -> 2470
+
+r--rwx--t
+470 -> 1470
+
+r--rws--t
+470 -> 2470 -> 3470
+
 ## Ezaugarri bereziak - Isattr eta chattr
 
 Ezaugarri bereziak ikusteko
@@ -149,7 +176,6 @@ charttr +u froga.txt
 ```bash
 chattr +e froga.txt
 ```
-![alt text](image-13.png)
 
 - "**c**" ezaugarriarekin fitxategi bat konprimituta egongo da.
   ```bash
@@ -182,7 +208,7 @@ lotu dagokion baimenarekin
 - --xrw--w-
 - r--rw--w-
 - --xrw---x
-# Erantzuna
+# Erantzuna 1
 - 463
 - 123
 - 711
@@ -202,3 +228,62 @@ lotu dagokion baimenarekin
 - --xrw--w- = 162
 - r--rw--w- = 462
 - --xrw---x = 161
+
+## Ariketa 2
+Zein da fitzategi honen baimenen baimena modu oktalean?
+![alt text](image-13.png)
+## Erantzuna 2
+honena baimena modu oktalean da 546
+geldituko zan orrela r-xr--rw-
+
+## Ariketa 3
+Jarri hurrengo baimenak modu oktalean
+
+r--r-xrw-
+--xr-xr--
+r--------
+--------x
+rwsr-xr-x
+rwxr-sr-x
+r--rw---t
+
+## Erantzuna 3
+
+r--r-xrw- da 456
+--xr-xr-- da 154
+r-------- da 400
+--------x da 001
+rwsr-xr-x da 755
+rwxr-sr-x da 755
+r--rw---t da 461
+
+## Ariketa 4
+Zer gertatuko da hurrengo agindua exekutatzean
+![alt text](image-14.png)
+1. "whoami" komandoaren output-a file fitxategian gordeko da, fitxategiaren jabea izateagatik baimenek ez baitidate eragiten
+2. "whoami" komandoaren output-a ezin da fole fitxategian gorde, jabea izan arren, fitxategian esleitutako baimena gailetzen delako
+   
+## Erantzun 4
+erantzuna 1 izango da zeba whoami da carpetaren jabea, eta ez du beste permisurik carpeta esateko ezindula ireki
+
+## Ariketa 5
+Nola sortuko zenuke "file" artxiboaren baimenak ikusten den moduan aldatzeko?
+![alt text](image-15.png)
+
+## Erantzuna 5
+erabili bearko zan (chmod 741) 
+
+## Ariketa 6
+Zortzitarrean zer baimen esleitu beharko dut artxiboak adierazitako baimenak izan ditzan lortzeko?
+![alt text](image-16.png)
+
+## Erantzuna 6
+625 izangozan zortzitarrean
+
+## Ariketa 7
+Honako baimen hauek konfiguratuta dituen fitxategi hau ezabatu ahal izango dut?
+![alt text](image-17.png)
+1. Bai
+2. Ez
+## Erantzuna 7
+Erantzuna izango zan bai, zeba emen daukagu usuraioa eta "w" bakarrik naidu ezan aldan edo ez dan idazten, ordun alko zan ebaztu, roouter-tik
