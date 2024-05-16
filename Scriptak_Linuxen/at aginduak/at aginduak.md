@@ -100,38 +100,47 @@ rootek beti erabil dezake.
 /etc/at.deny eta /etc/at.allow fitxategiak ez badaude, edozein erabiltzailek erabil dezake. 
 ***
 # Ariketa 2 
-Frogatu at komandoa erabiltzeko baimenik duzun ala ez. 
+Frogatu at komandoa erabiltzeko baimenik duzun ala ez.
+
 ![alt text](image-1.png)
 ***
 # Ariketa 3 
 prog1 5 minutu barru exekuta dadin, bidali D lan-zerrendara. 
+
 ![alt text](image-2.png)
 ![alt text](image-3.png)
 ***
 # Ariketa 4 
 prog2 10 minutu barru exekuta dadin (ordua zehaztu), bidali L lanzerrendara. 
+
 ![alt text](image-4.png)
 ***
 # Ariketa 5 
 Exekutarazi prog3, bihar arratsaldeko 15:00etan. 
+
 ![alt text](image-5.png)
 ***
 # Ariketa 6 
 Zerrendatu D lan-zerrendan dauden lanak 
-![alt text](image-7.png)***
+
+![alt text](image-7.png)
+***
 # Ariketa 7 
 Zerrendatu lan-zerrendetan dauden lanak. 
 ![alt text](image-8.png)
 ***
 # Ariketa 8 
 Ezabatu bihar exekutatu beharreko lana. 
+
 ![alt text](image-9.png)
 ***
 # Ariketa 9 
 Denbora igaro ondoren, frogatu exekutatu beharreko lanak exekutatu direla. 
+
 ![alt text](image-10.png)
 ***
 # Ariketa 10 
 urko kontua /etc/at.deny fitxategian sartu ondoren, exekutarazi prog3 urko kontutik, hiru minutu pasatu ondoren.
+
 ![alt text](image-11.png)
 ![alt text](image-12.png)
