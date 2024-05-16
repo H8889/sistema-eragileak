@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cal 12 2002 > egut1.sh
+cal 12 2002 > egut1.txt
 
 cat egut1.txt
 

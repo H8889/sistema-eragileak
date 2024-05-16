@@ -38,6 +38,8 @@
    3.2 Zerrendatu era luzean kanpoko fitxategi-sistemak muntatzen diren direktorioaren edukia, karpeta partekatutako zerren3 fitxategian. 
 
    3.3 Bihurtu exekutagarri sortu berri dituzun hiru fitxategi horiek.
+
+
 ***
 # at komandoa.
 *** 
